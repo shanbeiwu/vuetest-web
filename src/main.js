@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Button from 'element-ui'
 // 全部引入element-ui
 // import ElementUI from 'element-ui'
 // import 'element-ui/lib/theme-chalk/index.css'
@@ -10,6 +11,8 @@ import router from './router'
 // 按需引入element-ui 可只添加部分组件
 
 Vue.config.productionTip = false
+Vue.prototype.$ELEMENT = {size: 'small', zIndex: 3000}
+Vue.use(Button)
 
 /* eslint-disable no-new */
 new Vue({

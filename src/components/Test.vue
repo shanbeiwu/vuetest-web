@@ -12,7 +12,7 @@
         <th>姓名</th>
         <th>操作</th>
       </tr>
-      <tr v-for="(item,index) in peoples">
+      <tr v-for="(item, index) in peoples" :key="item.name">
         <td>
           {{item.name}}
         </td>

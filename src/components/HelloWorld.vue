@@ -18,12 +18,7 @@
         <router-link to="/header">Header</router-link>
       </li>
       <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
+        <router-link to="/map">map</router-link>
       </li>
       <li>
         <a

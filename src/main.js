@@ -9,10 +9,14 @@ import Button from 'element-ui'
 // import 'element-ui/lib/theme-chalk/index.css'
 // Vue.use(ElementUI)
 // 按需引入element-ui 可只添加部分组件
+import BaiduMap from 'vue-baidu-map'
 
 Vue.config.productionTip = false
 Vue.prototype.$ELEMENT = {size: 'small', zIndex: 3000}
 Vue.use(Button)
+Vue.use(BaiduMap, {
+  ak: 'FDG6tjNuiZw80Xx9RRiocu50KxxhkVud'
+})
 
 /* eslint-disable no-new */
 new Vue({

@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Test from '@/components/Test'
 import Header from '@/components/Header'
 import maptest from '@/view/maptest'
+import echartstest from '@/view/echartstest'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/map',
       name: 'maptest',
       component: maptest
+    },
+    {
+      path: '/echarts',
+      name: 'myecharts',
+      component: echartstest
     }
   ]
 })

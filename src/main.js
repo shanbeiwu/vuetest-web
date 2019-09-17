@@ -11,6 +11,7 @@ import Button from 'element-ui'
 // 按需引入element-ui 可只添加部分组件
 import BaiduMap from 'vue-baidu-map'
 import VueResourse from 'vue-resource'
+import myCharts from 'echarts'
 
 Vue.config.productionTip = false
 Vue.prototype.$ELEMENT = {size: 'small', zIndex: 3000}
@@ -19,6 +20,7 @@ Vue.use(BaiduMap, {
   ak: 'FDG6tjNuiZw80Xx9RRiocu50KxxhkVud'
 })
 Vue.use(VueResourse)
+Vue.use(myCharts)
 
 /* eslint-disable no-new */
 new Vue({

@@ -5,13 +5,20 @@
 <script>
 export default {
   name: 'getdatatest',
+  created: function () {
+    console.log('this is created')
+  },
   methods: {
     data () {
-      console.log('this is data')
+      return {
+        somedata: []
+      }
     },
     getdata () {
+      var data = {}
+      // var responseData = this.somedata
       this.$http.get('my data at localhost', {param1: 'param1'}).then(response => {
-        // somdata = response.body
+        data.responseData = response.body
       }, response => {
         // rror callback
       })

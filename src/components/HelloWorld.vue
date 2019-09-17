@@ -21,12 +21,7 @@
         <router-link to="/map">map</router-link>
       </li>
       <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
+        <router-link to="/echarts">echarts</router-link>
       </li>
       <li>
         <a

@@ -1,54 +1,42 @@
 <template>
   <div id="app">
-    <div class="topmenu">
-      <el-menu
-        :default-active="activeIndex2"
-        class="el-menu-demo"
-        mode="horizontal"
-        active-text-color="#ffd04b"
-        @select="handleSelect">
-        <el-submenu index="1">
-          <template slot="title">处理中心</template>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
-          <el-menu-item index="1-3">选项3</el-menu-item>
-          <el-menu-item index="1-4">选项4</el-menu-item>
-        </el-submenu>
-        <el-submenu index="2">
-          <template slot="title">我的工作台</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-          <el-menu-item index="2-4">选项4</el-menu-item>
-          <!--<el-submenu index="2-4">-->
-            <!--<template slot="title">选项4</template>-->
-            <!--<el-menu-item index="2-4-1">选项1</el-menu-item>-->
-            <!--<el-menu-item index="2-4-2">选项2</el-menu-item>-->
-            <!--<el-menu-item index="2-4-3">选项3</el-menu-item>-->
-          <!--</el-submenu>-->
-        </el-submenu>
-        <el-menu-item index="3">消息中心</el-menu-item>
-        <el-menu-item index="4">订单管理</el-menu-item>
-      </el-menu>
-      <div class="line"></div>
-    </div>
-    <!--<img src="./assets/logo.png">-->
-    <router-view/>
+<!--    <topMenu></topMenu>-->
+    <el-container style="width: 100%;height: 110%">
+    <el-header style="padding: 0px 0px">
+      <div class="header"></div>
+    </el-header>
+      <el-container direction="horizontal">
+        <el-aside style="width: 15%;height: 110%;border-right: 1px;
+                        border-right-color: #bbbbbb;
+                        border-right-style: solid;">
+          <leftMenu></leftMenu>
+        </el-aside>
+        <el-main style="width: 75%;height: 110%;padding: 0px 0px">
+          <router-view/>
+        </el-main>
+      </el-container>
+    <el-footer style="padding: 0px 0px">
+      <footBanner></footBanner>
+    </el-footer>
+    </el-container>
   </div>
 </template>
 
 <script>
+import topMenu from './components/topMenu/topMenu'
+import leftMenu from './components/topMenu/leftMenu'
+import footBanner from './components/footBenner/footBanner'
 export default {
   name: 'App',
+  components: {
+    topMenu,
+    leftMenu,
+    footBanner
+  },
   data () {
-    return {
-      activeIndex2: '1'
-    }
+    return {}
   },
   methods: {
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath)
-    }
   }
 }
 </script>
@@ -61,22 +49,21 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 0px;
+    height: 100%;
+  }
+  html {
+    height: 100%;
   }
   body {
     margin-top: 0px;
     margin-right: 0px;
     margin-left: 0px;
     margin-bottom: 0px;
+    height: 100%;
   }
-  /*.el-menu--horizontal>.el-menu-item {*/
-    /*float: right;*/
-    /*width: 120px;*/
-  /*}*/
-  /*.el-menu--horizontal>.el-submenu {*/
-    /*float: right;*/
-    /*width: 120px;*/
-  /*}*/
-  /*div.el-menu--horizontal {*/
-    /*width: 120px!important;*/
-  /*}*/
+  .header {
+    width: 100%;
+    height: 60px;
+    background-color: #0074D9;
+  }
 </style>
